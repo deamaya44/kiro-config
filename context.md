@@ -12,7 +12,7 @@
 - Usar siempre rama `main` (nunca `master`)
 - **Usar SSH para todos los repos** (no HTTPS)
   - Formato: `git@github.com:usuario/repo.git`
-  - Para clonar: `gh repo clone usuario/repo` (usa SSH por defecto)
+  - Para clonar: `git clone git@github.com:usuario/repo.git`
   - Para módulos de Terraform: `git::https://github.com/usuario/repo.git//path?ref=main`
 
 ## Seguridad
