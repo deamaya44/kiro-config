@@ -103,7 +103,7 @@ nano ~/.kiro/context.md
 
 ```markdown
 ## Estructura de Proyectos
-```
+```bash
 proyecto/
 ├── src/           # Código fuente
 ├── tests/         # Tests
