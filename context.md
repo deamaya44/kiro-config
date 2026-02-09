@@ -14,5 +14,7 @@
 ## Seguridad
 - SIEMPRE revisar archivos antes de hacer push a CUALQUIER repositorio
 - NUNCA publicar credenciales, tokens, API keys, contraseñas o información sensible
+- **NO usar archivos .env** para secretos
+- Usar **vaults de secretos en la nube** (AWS Secrets Manager, Parameter Store, etc.)
+- Exportar variables de entorno directamente en el sistema cuando sea necesario
 - Recomendar al usuario las mejores prácticas de seguridad
-- Usar variables de entorno o archivos .env (en .gitignore) para credenciales
