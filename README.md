@@ -129,6 +129,18 @@ git pull
 ./install.sh
 ```
 
+## 💡 Consejos de uso
+
+### Guardar sesiones importantes
+
+Puedes pedirle a Kiro que guarde un resumen de la sesión actual:
+
+```
+guarda esta sesión porfa
+```
+
+Las sesiones se guardan automáticamente en `~/kiro/sessions/` con fecha y descripción.
+
 ## 📚 Recursos
 
 - [Kiro CLI Docs](https://kiro.dev/cli/)
