@@ -27,6 +27,31 @@ cat > "$KIRO_DIR/settings/context.json" << 'EOF'
 }
 EOF
 
+echo "🔧 Configurando agente default..."
+mkdir -p "$KIRO_DIR/agents"
+cat > "$KIRO_DIR/agents/default.json" << 'EOF'
+{
+  "name": "default",
+  "description": "Agente por defecto con contexto global",
+  "resources": [
+    "file://~/.kiro/context.md"
+  ],
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "glob",
+    "grep",
+    "code",
+    "web_search",
+    "web_fetch",
+    "use_aws",
+    "use_subagent"
+  ]
+}
+EOF
+
+kiro-cli agent set-default --name default
 echo ""
 echo "✅ Listo! Kiro leerá el contexto automáticamente"
 echo "📁 Sesiones: $SESSIONS_DIR"
