@@ -133,7 +133,3 @@ git pull
 
 - [Kiro CLI Docs](https://kiro.dev/cli/)
 - [Módulos AWS](https://github.com/deamaya44/aws_modules)
-
-## 📝 Licencia
-
-MIT
