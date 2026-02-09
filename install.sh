@@ -4,15 +4,17 @@ set -e
 
 echo "🚀 Configurando Kiro..."
 
-KIRO_CONFIG_DIR="$HOME/.kiro"
+KIRO_CONTEXT_DIR="$HOME/.kiro/context"
 SESSIONS_DIR="$HOME/kiro/sessions"
+SCRIPT_DIR="$(dirname "$0")"
 
-mkdir -p "$KIRO_CONFIG_DIR"
+mkdir -p "$KIRO_CONTEXT_DIR"
 mkdir -p "$SESSIONS_DIR"
 
 echo "📝 Copiando contexto global..."
-cp "$(dirname "$0")/context.md" "$KIRO_CONFIG_DIR/context.md"
+cp "$SCRIPT_DIR/context.md" "$KIRO_CONTEXT_DIR/context.md"
 
-echo "✅ Configuración completada!"
-echo "📁 Directorio de sesiones: $SESSIONS_DIR"
-echo "📄 Contexto global: $KIRO_CONFIG_DIR/context.md"
+echo ""
+echo "✅ Listo! Kiro leerá el contexto automáticamente"
+echo "📁 Sesiones: $SESSIONS_DIR"
+echo "📄 Contexto: $KIRO_CONTEXT_DIR/context.md"
