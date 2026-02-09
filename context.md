@@ -13,7 +13,7 @@
 - **Usar SSH para todos los repos** (no HTTPS)
   - Formato: `git@github.com:usuario/repo.git`
   - Para clonar: `gh repo clone usuario/repo` (usa SSH por defecto)
-  - Para módulos de Terraform: `git::ssh://git@github.com/usuario/repo.git//path?ref=main`
+  - Para módulos de Terraform: `git::https://github.com/usuario/repo.git//path?ref=main`
 
 ## Seguridad
 - SIEMPRE revisar archivos antes de hacer push a CUALQUIER repositorio
