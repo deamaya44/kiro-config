@@ -131,7 +131,7 @@ git pull
 
 ## 📚 Recursos
 
-- [Kiro CLI Docs](https://cli.kiro.dev)
+- [Kiro CLI Docs](https://kiro.dev/cli/)
 - [Módulos AWS](https://github.com/deamaya44/aws_modules)
 
 ## 📝 Licencia
