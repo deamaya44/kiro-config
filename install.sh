@@ -6,7 +6,6 @@ echo "🚀 Configurando Kiro..."
 
 KIRO_DIR="$HOME/.kiro"
 SESSIONS_DIR="$HOME/kiro-sessions"
-SCRIPT_DIR="$(dirname "$0")"
 
 mkdir -p "$KIRO_DIR/settings"
 
@@ -21,7 +20,7 @@ fi
 mkdir -p "$SESSIONS_DIR/sessions"
 
 echo "📝 Instalando contexto global..."
-cp "$SCRIPT_DIR/context.md" "$KIRO_DIR/context.md"
+curl -sSL https://raw.githubusercontent.com/deamaya44/kiro-config/main/context.md -o "$KIRO_DIR/context.md"
 
 echo "⚙️  Configurando contexto..."
 cat > "$KIRO_DIR/settings/context.json" << 'EOF'
