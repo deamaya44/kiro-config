@@ -2,9 +2,11 @@
 
 ## Directorio de Sesiones
 - Guardar todas las sesiones en: `$HOME/kiro-sessions/sessions/`
+- **Formato de nombres:** `YYYY-MM-DD-nombre-descriptivo.md` (ejemplo: `2026-02-19-migracion-vm-python.md`)
+- **Informes largos/técnicos:** Guardar en `$HOME/kiro-sessions/informes/` con el mismo formato de fecha
 - **Sincronizar con Git después de guardar:**
   ```bash
-  cd ~/kiro-sessions && git add sessions/ && git commit -m "Update session: $(date +%Y-%m-%d)" && git push
+  cd ~/kiro-sessions && git add . && git commit -m "Update session: $(date +%Y-%m-%d)" && git push
   ```
 - Leer sesiones previas de ese directorio cuando sea relevante
 - Repo privado: `git@github.com:deamaya44/kiro-sessions.git`
