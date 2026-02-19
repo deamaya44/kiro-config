@@ -1,8 +1,13 @@
 # Contexto Global de Kiro
 
 ## Directorio de Sesiones
-- Guardar todas las sesiones en: `$HOME/kiro/sessions/`
+- Guardar todas las sesiones en: `$HOME/kiro-sessions/sessions/`
+- **Sincronizar con Git después de guardar:**
+  ```bash
+  cd ~/kiro-sessions && git add sessions/ && git commit -m "Update session: $(date +%Y-%m-%d)" && git push
+  ```
 - Leer sesiones previas de ese directorio cuando sea relevante
+- Repo privado: `git@github.com:deamaya44/kiro-sessions.git`
 
 ## Preferencias
 - No usar Docker para servidores MCP (usar npx/uvx en su lugar)
