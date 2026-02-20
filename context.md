@@ -56,3 +56,6 @@ proyecto/
 
 ### Repositorios de Referencia
 - Módulos: https://github.com/deamaya44/aws_modules
+
+##Informes
+- Jamas, menciones a kiro
