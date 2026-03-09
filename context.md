@@ -2,7 +2,7 @@
 
 ## Directorio de Sesiones
 - Guardar todas las sesiones en: `$HOME/kiro-sessions/sessions/`
-- **Formato de nombres:** `YYYY-MM-DD-nombre-descriptivo.md` (ejemplo: `2026-02-19-migracion-vm-python.md`)
+- **Formato de nombres:** `YYYY-MM-DD-nombre-descriptivo.md` (ejemplo: `2026-03-09-cloudflare-pages-cka-repo.md`)
 - **Informes largos/técnicos:** Guardar en `$HOME/kiro-sessions/informes/` con el mismo formato de fecha
 - **Sincronizar con Git después de guardar:**
   ```bash
@@ -10,6 +10,13 @@
   ```
 - Leer sesiones previas de ese directorio cuando sea relevante
 - Repo privado: `git@github.com:deamaya44/kiro-sessions.git`
+
+## Estilo de Comunicación
+- **Tono técnico profesional** - sin emojis, directo al punto
+- **Lenguaje senior dev** - conciso, sin explicaciones obvias
+- **Documentación limpia** - formato técnico, no tutorial
+- **Sin mencionar "Kiro"** en informes o documentación generada
+- Respuestas directas sin frases de relleno
 
 ## Preferencias
 - No usar Docker para servidores MCP (usar npx/uvx en su lugar)
@@ -57,5 +64,9 @@ proyecto/
 ### Repositorios de Referencia
 - Módulos: https://github.com/deamaya44/aws_modules
 
-##Informes
-- Jamas, menciones a kiro
+## Documentación
+- Sin emojis en archivos técnicos
+- Formato profesional y directo
+- Hipervínculos completos en READMEs
+- Estructura consistente entre módulos
+- Nunca mencionar "Kiro" en documentación generada
