@@ -5,19 +5,8 @@ set -e
 echo "🚀 Configurando Kiro..."
 
 KIRO_DIR="$HOME/.kiro"
-SESSIONS_DIR="$HOME/kiro-sessions"
 
 mkdir -p "$KIRO_DIR/settings"
-
-echo "📦 Clonando repositorio de sesiones..."
-if [ ! -d "$SESSIONS_DIR" ]; then
-  git clone git@github.com:deamaya44/kiro-sessions.git "$SESSIONS_DIR"
-else
-  echo "⚠️  Repositorio ya existe, actualizando..."
-  cd "$SESSIONS_DIR" && git pull
-fi
-
-mkdir -p "$SESSIONS_DIR/sessions"
 
 echo "📝 Instalando contexto global..."
 curl -sSL https://raw.githubusercontent.com/deamaya44/kiro-config/main/context.md -o "$KIRO_DIR/context.md"
@@ -60,10 +49,7 @@ cat > "$KIRO_DIR/agents/default.json" << 'EOF'
 EOF
 
 kiro-cli agent set-default --name default
+
 echo ""
 echo "✅ Listo! Kiro leerá el contexto automáticamente"
-echo "📁 Sesiones: $SESSIONS_DIR/sessions"
 echo "📄 Contexto: $KIRO_DIR/context.md"
-echo ""
-echo "💡 Tip: Las sesiones se sincronizan automáticamente con GitHub"
-echo "   Repo: git@github.com:deamaya44/kiro-sessions.git"
