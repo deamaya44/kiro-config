@@ -1,1 +1,5 @@
 .kiro/
+# Never commit local private overlays if someone copies them into the clone
+context/private.md
+**/.env
+**/secrets/

@@ -1,0 +1,13 @@
+# Optional private overlay (NOT shipped with public install content)
+
+Copy to `~/.kiro/context/private.md` on your machines only.
+Never commit real contents to the public `kiro-config` repo.
+
+Suggested sections (fill locally):
+- Active clients / projects (short codes only if needed)
+- Cloud account / project identifiers
+- Domains, clusters, notable endpoints
+- Paths to local report assets and assessment scripts
+- Pointers to canonical private session summaries
+
+Agents that need facts should read this file when present, and otherwise ask.
