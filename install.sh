@@ -30,9 +30,10 @@ fetch() {
 }
 
 echo "Installing context slices..."
-for f in global.md routing.md iac.md reports.md runtime-gcp.md runtime-aws.md homelab.md; do
+for f in global.md routing.md iac.md reports.md runtime-gcp.md runtime-aws.md; do
   fetch "context/${f}" "${CONTEXT_DIR}/${f}"
 done
+rm -f "${CONTEXT_DIR}/homelab.md" "${AGENTS_DIR}/homelab.json"
 
 # Compatibility entrypoint still expected by older notes
 fetch "context/global.md" "${KIRO_DIR}/context.md"
@@ -46,7 +47,7 @@ else
 fi
 
 echo "Installing agents..."
-for f in default.json iac.json reports.json runtime-gcp.json runtime-aws.json homelab.json; do
+for f in default.json iac.json reports.json runtime-gcp.json runtime-aws.json; do
   fetch "agents/${f}" "${AGENTS_DIR}/${f}"
 done
 
@@ -64,7 +65,7 @@ EOF
 
 if command -v kiro-cli >/dev/null 2>&1; then
   echo "Validating agents..."
-  for f in default iac reports runtime-gcp runtime-aws homelab; do
+  for f in default iac reports runtime-gcp runtime-aws; do
     kiro-cli agent validate --path "${AGENTS_DIR}/${f}.json"
   done
   kiro-cli agent set-default --name default
@@ -74,7 +75,7 @@ fi
 
 echo ""
 echo "Done."
-echo "Agents: default (orchestrator), iac, reports, runtime-gcp, runtime-aws, homelab"
+echo "Agents: default (orchestrator), iac, reports, runtime-gcp, runtime-aws"
 echo "Standards: ${CONTEXT_DIR}"
 echo "Private overlay: ${CONTEXT_DIR}/private.md  (local only)"
 echo "List agents: kiro-cli agent list"

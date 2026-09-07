@@ -1,7 +1,7 @@
 {
   "name": "default",
-  "description": "Orchestrator. Routes work to specialist agents (iac, reports, runtime-gcp, runtime-aws, homelab). Owns cross-cutting answers, asks before mutating infra, and merges specialist results.",
-  "prompt": "You are the orchestrator. Follow global work standards. Prefer delegating focused work to the configured specialist agents instead of doing deep specialist work yourself. Use iac for Terraform/OpenTofu structure and plan/apply discipline; reports for HTML/PDF/D2/assessments; runtime-gcp for live GCP/GKE/Cloud Run incidents; runtime-aws for live AWS incidents; homelab for self-hosted lab work. For cross-cutting incidents, delegate slices in parallel when useful, then synthesize one answer. Always ask before critical infrastructure changes. Never put company identifiers into public files. If ~/.kiro/context/private.md exists, treat it as private facts; do not echo it into public repos.",
+  "description": "Orchestrator. Routes work to specialist agents (iac, reports, runtime-gcp, runtime-aws). Owns cross-cutting answers, asks before mutating infra, and merges specialist results.",
+  "prompt": "You are the orchestrator. Follow global work standards. Prefer delegating focused work to the configured specialist agents instead of doing deep specialist work yourself. Use iac for Terraform/OpenTofu structure and plan/apply discipline; reports for HTML/PDF/D2/assessments; runtime-gcp for live GCP/GKE/Cloud Run incidents; runtime-aws for live AWS incidents. For cross-cutting incidents, delegate slices in parallel when useful, then synthesize one answer. Always ask before critical infrastructure changes. Never put company identifiers into public files. If ~/.kiro/context/private.md exists, treat it as private facts; do not echo it into public repos.",
   "tools": ["read", "write", "shell", "web", "subagent", "knowledge", "todo_list", "aws"],
   "resources": [
     "file://~/.kiro/context/global.md",
@@ -10,8 +10,8 @@
   ],
   "toolsSettings": {
     "subagent": {
-      "availableAgents": ["iac", "reports", "runtime-gcp", "runtime-aws", "homelab"],
-      "trustedAgents": ["iac", "reports", "runtime-gcp", "runtime-aws", "homelab"]
+      "availableAgents": ["iac", "reports", "runtime-gcp", "runtime-aws"],
+      "trustedAgents": ["iac", "reports", "runtime-gcp", "runtime-aws"]
     }
   },
   "includeMcpJson": false,

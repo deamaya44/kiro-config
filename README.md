@@ -27,7 +27,6 @@ cd kiro-config
 | `reports` | HTML→PDF reports, assessments, D2 |
 | `runtime-gcp` | Live GCP / GKE / Cloud Run operations |
 | `runtime-aws` | Live AWS operations |
-| `homelab` | Self-hosted / personal lab |
 
 `default` is configured with `subagent.availableAgents` limited to that set (no anonymous catch-all specialists).
 
@@ -54,7 +53,6 @@ Install target:
     ├── reports.md
     ├── runtime-gcp.md
     ├── runtime-aws.md
-    ├── homelab.md
     └── private.md      # created once locally; never publish real contents
 ```
 
